@@ -1,0 +1,172 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  --color-blue-text: #3CC3BD;
+  --color-bayby-blue-text: #D5F2F0;
+  --color-blue-text-ligth: #FAFFFF;
+}
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-blue-text);
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  background: url(images/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.container {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 15fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= caixa-bem-vindo ================= */
+.welcome-box {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.welcome-box > img {
+  height: 80vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.welcome-box {
+  width: min(90vw, 1000px);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr .5fr 3fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.name-welcome {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.name-welcome h1 {
+  font-size: 50px;
+  color: var(--color-blue-text-ligth);
+  writing-mode: vertical-rl; /* deixa o texto na horizontal */
+}
+
+.motivational-message {
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+.motivational-message h4 {
+  color: var(--color-blue-text-ligth);
+}
+
+.login-screen {
+  grid-column: 5/6;
+  grid-row: 2/3;
+  text-align: center;
+}
+
+.login-screen h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 1rem 0 .2rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================= button ================= */
+button {
+  margin-top: 1rem;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  color: var(--color-blue-text-ligth);
+  background: var(--color-blue-text);
+  padding: 1rem 4rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+input{
+  border: none;
+  background: var(--color-bayby-blue-text);
+  width: 100%;
+  height: 30px;
+  border-radius: .30rem;
+  padding: .8rem;
+}
+
+/* ================= rodapé ================= */
+footer {
+  grid-column: 1/4;
+  grid-row: 3/4;
+
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  color: var(--color-blue-text);
+}
+
+@media (max-width: 1024px) {
+  .welcome-box {
+    max-width: 80vw;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 87.5%;
+  }
+  main {
+    background: var(--color-blue-text-ligth);
+  }
+  .container {
+    background: var(--color-blue-text-ligth);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+  }
+  .welcome-box {
+    grid-template-columns: 1fr 7fr 1fr;
+    grid-template-rows: 1fr 7fr 1fr;
+    align-content: center;
+    justify-content: center;
+  }
+  .welcome-box > img {
+    height: 100vh;
+  }
+  .name-welcome {
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+  .name-welcome h1 {
+    writing-mode: horizontal-tb;
+    color: var(--color-blue-text);
+    text-align: center;
+  }
+  .login-screen {
+    margin-top: 5rem;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 70%;
+    height: 100%;
+    text-align: center;
+  }
+
+}
