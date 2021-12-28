@@ -7,12 +7,6 @@
 Arquivo base do Figma: https://www.figma.com/file/6S9637x9abCwe1Men4rzNQ/Seu-melhor-Neg%C3%B3cio?node-id=0%3A1
 
 # O resultado foi esse:
-<p alingn="center">
-  <img src=".github/assets/img01.png" width="100%">
-</p>
-<p alingn="center">
-  <img src=".github/assets/img02.png" height="100%">
-</p>
-<p alingn="center">
-  <img src=".github/assets/img03.png" height="100%">
-</p>
+<p align="center"><img src=".github/assets/img01.png" width="100%"></p>
+<p align="center"><img src=".github/assets/img02.png" height="100%"></p>
+<p align="center"><img src=".github/assets/img03.png" height="100%"></p>
